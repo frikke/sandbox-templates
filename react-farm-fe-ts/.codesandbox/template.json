@@ -1,0 +1,7 @@
+{
+  "title": "React (Farm FE + TS)",
+  "description": "React running with Farm",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/react-farm-fe-ts/.codesandbox/icon.png",
+  "tags": ["react", "farm", "javascript", "typescript"],
+  "published": true
+}

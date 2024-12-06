@@ -1,0 +1,7 @@
+{
+  "title": "Rust & Axum",
+  "description": "A starter for getting started with Axum and Rust",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/rust/.codesandbox/icon.png",
+  "tags": ["rust", "cargo", "axum"],
+  "published": true
+}

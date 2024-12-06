@@ -1,3 +1,3 @@
-FROM oven/bun:1.0.11-debian
+FROM oven/bun:1.1.38-debian
 
 WORKDIR /workspace

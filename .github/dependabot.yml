@@ -8,14 +8,6 @@ updates:
       deps:
         patterns:
           - '*'
-  - package-ecosystem: docker
-    directory: /angular/.devcontainer
-    schedule:
-      interval: daily
-    groups:
-      deps:
-        patterns:
-          - '*'
   - package-ecosystem: npm
     directory: /astro
     schedule:
@@ -32,32 +24,8 @@ updates:
       deps:
         patterns:
           - '*'
-  - package-ecosystem: docker
-    directory: /astro-starlight/.devcontainer
-    schedule:
-      interval: daily
-    groups:
-      deps:
-        patterns:
-          - '*'
   - package-ecosystem: npm
     directory: /astro-tailwind
-    schedule:
-      interval: daily
-    groups:
-      deps:
-        patterns:
-          - '*'
-  - package-ecosystem: docker
-    directory: /astro-tailwind/.devcontainer
-    schedule:
-      interval: daily
-    groups:
-      deps:
-        patterns:
-          - '*'
-  - package-ecosystem: docker
-    directory: /astro/.devcontainer
     schedule:
       interval: daily
     groups:
@@ -89,15 +57,15 @@ updates:
         patterns:
           - '*'
   - package-ecosystem: npm
-    directory: /create-t3-app
+    directory: /codeium
     schedule:
       interval: daily
     groups:
       deps:
         patterns:
           - '*'
-  - package-ecosystem: docker
-    directory: /create-t3-app/.devcontainer
+  - package-ecosystem: npm
+    directory: /create-t3-app
     schedule:
       interval: daily
     groups:
@@ -136,14 +104,6 @@ updates:
       deps:
         patterns:
           - '*'
-  - package-ecosystem: docker
-    directory: /docusaurus/.devcontainer
-    schedule:
-      interval: daily
-    groups:
-      deps:
-        patterns:
-          - '*'
   - package-ecosystem: mix
     directory: /elixir
     schedule:
@@ -168,8 +128,32 @@ updates:
       deps:
         patterns:
           - '*'
-  - package-ecosystem: docker
-    directory: /gatsby/.devcontainer
+  - package-ecosystem: npm
+    directory: /hono-next
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: npm
+    directory: /html-css
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: npm
+    directory: /javascript
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: pip
+    directory: /jupyter
     schedule:
       interval: daily
     groups:
@@ -177,7 +161,15 @@ updates:
         patterns:
           - '*'
   - package-ecosystem: docker
-    directory: /go/.devcontainer
+    directory: /jupyter/.devcontainer
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: npm
+    directory: /nest
     schedule:
       interval: daily
     groups:
@@ -193,23 +185,15 @@ updates:
         patterns:
           - '*'
   - package-ecosystem: npm
+    directory: /nextjs-15
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: npm
     directory: /nextjs-app-router
-    schedule:
-      interval: daily
-    groups:
-      deps:
-        patterns:
-          - '*'
-  - package-ecosystem: docker
-    directory: /nextjs-app-router/.devcontainer
-    schedule:
-      interval: daily
-    groups:
-      deps:
-        patterns:
-          - '*'
-  - package-ecosystem: docker
-    directory: /nextjs/.devcontainer
     schedule:
       interval: daily
     groups:
@@ -225,23 +209,15 @@ updates:
         patterns:
           - '*'
   - package-ecosystem: npm
+    directory: /node-express-server
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: npm
     directory: /node-http-server
-    schedule:
-      interval: daily
-    groups:
-      deps:
-        patterns:
-          - '*'
-  - package-ecosystem: docker
-    directory: /node-http-server/.devcontainer
-    schedule:
-      interval: daily
-    groups:
-      deps:
-        patterns:
-          - '*'
-  - package-ecosystem: docker
-    directory: /node/.devcontainer
     schedule:
       interval: daily
     groups:
@@ -256,14 +232,6 @@ updates:
       deps:
         patterns:
           - '*'
-  - package-ecosystem: docker
-    directory: /nodebox-starter/.devcontainer
-    schedule:
-      interval: daily
-    groups:
-      deps:
-        patterns:
-          - '*'
   - package-ecosystem: npm
     directory: /nuxt
     schedule:
@@ -272,8 +240,24 @@ updates:
       deps:
         patterns:
           - '*'
+  - package-ecosystem: npm
+    directory: /nuxt-todos-edge
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: npm
+    directory: /postgres-drizzle-nextjs
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
   - package-ecosystem: docker
-    directory: /nuxt/.devcontainer
+    directory: /postgres-drizzle-nextjs/.devcontainer
     schedule:
       interval: daily
     groups:
@@ -289,6 +273,14 @@ updates:
         patterns:
           - '*'
   - package-ecosystem: pip
+    directory: /python-fasthtml
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: pip
     directory: /python-flask-server
     schedule:
       interval: daily
@@ -296,8 +288,8 @@ updates:
       deps:
         patterns:
           - '*'
-  - package-ecosystem: docker
-    directory: /python-flask-server/.devcontainer
+  - package-ecosystem: pip
+    directory: /python-openai
     schedule:
       interval: daily
     groups:
@@ -305,7 +297,55 @@ updates:
         patterns:
           - '*'
   - package-ecosystem: docker
-    directory: /python/.devcontainer
+    directory: /python-openai/.devcontainer
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: pip
+    directory: /python-pytorch
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /python-pytorch/.devcontainer
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: pip
+    directory: /python-selenium
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /python-selenium/.devcontainer
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: pip
+    directory: /python-tensorflow
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /python-tensorflow/.devcontainer
     schedule:
       interval: daily
     groups:
@@ -321,7 +361,23 @@ updates:
         patterns:
           - '*'
   - package-ecosystem: docker
-    directory: /qwik-vite/.devcontainer
+    directory: /rails/.devcontainer
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: npm
+    directory: /react-chakra
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: npm
+    directory: /react-farm-fe-ts
     schedule:
       interval: daily
     groups:
@@ -336,8 +392,24 @@ updates:
       deps:
         patterns:
           - '*'
-  - package-ecosystem: docker
-    directory: /react-native-expo/.devcontainer
+  - package-ecosystem: npm
+    directory: /react-rsbuild-ts
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: npm
+    directory: /react-tailwind
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: npm
+    directory: /react-vite
     schedule:
       interval: daily
     groups:
@@ -352,14 +424,6 @@ updates:
       deps:
         patterns:
           - '*'
-  - package-ecosystem: docker
-    directory: /react-vite-ts/.devcontainer
-    schedule:
-      interval: daily
-    groups:
-      deps:
-        patterns:
-          - '*'
   - package-ecosystem: npm
     directory: /remix
     schedule:
@@ -368,8 +432,8 @@ updates:
       deps:
         patterns:
           - '*'
-  - package-ecosystem: docker
-    directory: /remix/.devcontainer
+  - package-ecosystem: cargo
+    directory: /rust
     schedule:
       interval: daily
     groups:
@@ -377,7 +441,15 @@ updates:
         patterns:
           - '*'
   - package-ecosystem: cargo
-    directory: /rust
+    directory: /rust-axum
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /rust-axum/.devcontainer
     schedule:
       interval: daily
     groups:
@@ -425,6 +497,22 @@ updates:
         patterns:
           - '*'
   - package-ecosystem: npm
+    directory: /sandbox-migration
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: npm
+    directory: /solid-start
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: npm
     directory: /solid-vite
     schedule:
       interval: daily
@@ -432,8 +520,8 @@ updates:
       deps:
         patterns:
           - '*'
-  - package-ecosystem: docker
-    directory: /solid-vite/.devcontainer
+  - package-ecosystem: npm
+    directory: /storybook-react
     schedule:
       interval: daily
     groups:
@@ -448,8 +536,24 @@ updates:
       deps:
         patterns:
           - '*'
+  - package-ecosystem: npm
+    directory: /tanstack-start
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
   - package-ecosystem: docker
-    directory: /sveltekit/.devcontainer
+    directory: /universal/.devcontainer
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: npm
+    directory: /vite
     schedule:
       interval: daily
     groups:
@@ -464,24 +568,8 @@ updates:
       deps:
         patterns:
           - '*'
-  - package-ecosystem: docker
-    directory: /vite-ts/.devcontainer
-    schedule:
-      interval: daily
-    groups:
-      deps:
-        patterns:
-          - '*'
   - package-ecosystem: npm
     directory: /vue-vite
-    schedule:
-      interval: daily
-    groups:
-      deps:
-        patterns:
-          - '*'
-  - package-ecosystem: docker
-    directory: /vue-vite/.devcontainer
     schedule:
       interval: daily
     groups:

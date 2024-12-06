@@ -1,38 +1,36 @@
-import { getSyncedSandboxDetails } from "./api.ts";
-import { startSandbox, shutdownSandbox } from "./pitcher-manager.ts";
+import { restartTemplate } from "./pitcher-manager.ts";
 import { getTemplates } from "./utils.ts";
+import { chunk } from "https://deno.land/std@0.221.0/collections/chunk.ts";
 
-const clusters = ["fc-eu-0", "fc-us-0"];
+const template = Deno.args[0];
 
-const owner = "codesandbox";
-const repo = "sandbox-templates";
-const branch = "main";
+const CONCURRENT_RESTART_COUNT = 5;
 
-async function restartTemplate(template: string) {
-  const sandboxDetails = await getSyncedSandboxDetails(
-    owner,
-    repo,
-    branch,
-    template
-  );
-  await Promise.all(
-    clusters.map(async (clusterName) => {
+if (template) {
+  console.log(`Restarting template: ${template}`);
+  await restartTemplate(template);
+} else {
+  const templates = await getTemplates();
+
+  let doneCount = 0;
+  const templateChunks = chunk([...templates], CONCURRENT_RESTART_COUNT);
+
+  for (const templateChunk of templateChunks) {
+    const promises = [];
+    for (const template of templateChunk) {
       console.log(
-        `Restarting sandbox, Cluster:${clusterName} \t SandboxId:${
-          sandboxDetails.id
-        } \t Template: ${template}`
+        `Restarting template: ${template} (${doneCount + 1}/${templates.size})`,
+      );
+      promises.push(
+        restartTemplate(template).catch((e) => {
+          console.error("Failed to restart " + template);
+          console.error(e);
+        }),
       );
 
-      // Start sandbox so that shutdown works later (eg: start from hibernation)
-      await startSandbox(clusterName, sandboxDetails.id);
-      await shutdownSandbox(clusterName, sandboxDetails.id);
-      await startSandbox(clusterName, sandboxDetails.id);
-    })
-  );
-}
-const templates = await getTemplates();
+      doneCount++;
+    }
 
-for (const template of templates) {
-  await restartTemplate(template);
-  break;
+    await Promise.all(promises);
+  }
 }
