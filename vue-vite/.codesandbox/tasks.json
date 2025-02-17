@@ -3,16 +3,23 @@
   "setupTasks": [
     {
       "name": "Install Dependencies",
-      "command": "npm install"
+      "command": "pnpm install"
     }
   ],
 
   // These tasks can be run from CodeSandbox. Running one will open a log in the app.
   "tasks": {
-    "npm run dev": {
+    "pnpm run dev": {
       "name": "Vite Dev",
-      "command": "npm run dev",
-      "runAtStart": true
+      "command": "pnpm run dev",
+      "runAtStart": true,
+      "preview": {
+        "port": 5173
+      }
+    },
+    "install": {
+      "name": "install dependencies",
+      "command": "pnpm install"
     }
   }
 }
